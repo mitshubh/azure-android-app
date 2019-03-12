@@ -1,0 +1,15 @@
+#Internal package file, do not edit.
+#Mon Mar 11 15:24:24 PDT 2019
+1.base=/Users/mittalsh/workplace/Azure/azure-sample/azure-iot-samples-java/iot-hub/Samples/device/AndroidSample/app/build/intermediates/transforms/dexMerger/debug/31
+2.path=classes2.dex
+0.baseType=DIRECTORY
+2.base=/Users/mittalsh/workplace/Azure/azure-sample/azure-iot-samples-java/iot-hub/Samples/device/AndroidSample/app/build/intermediates/transforms/dexMerger/debug/31
+2.set=DEX
+1.baseType=DIRECTORY
+count=3
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=/Users/mittalsh/workplace/Azure/azure-sample/azure-iot-samples-java/iot-hub/Samples/device/AndroidSample/app/build/intermediates/transforms/dexMerger/debug/31
+2.baseType=DIRECTORY
+1.path=classes3.dex

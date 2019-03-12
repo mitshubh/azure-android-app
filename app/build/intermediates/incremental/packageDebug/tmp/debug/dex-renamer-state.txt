@@ -1,0 +1,10 @@
+#Mon Mar 11 15:24:24 PDT 2019
+path.2=classes3.dex
+path.1=classes2.dex
+path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=/Users/mittalsh/workplace/Azure/azure-sample/azure-iot-samples-java/iot-hub/Samples/device/AndroidSample/app/build/intermediates/transforms/dexMerger/debug/31
+base.1=/Users/mittalsh/workplace/Azure/azure-sample/azure-iot-samples-java/iot-hub/Samples/device/AndroidSample/app/build/intermediates/transforms/dexMerger/debug/31
+base.0=/Users/mittalsh/workplace/Azure/azure-sample/azure-iot-samples-java/iot-hub/Samples/device/AndroidSample/app/build/intermediates/transforms/dexMerger/debug/31

@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
     TextView txtMsgsSentVal;
     TextView txtLastMsgSentVal;
-    TextView txtLastMsgReceivedVal;
 
     private int msgSentCount = 0;
     private int receiptsConfirmedCount = 0;
@@ -71,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
     private SensorManager sensorManager;
     private Sensor sensor_accelero;
     private float x, y, z;
+    private int winsCount = 0;
+    private int lossesCount = 0;
 
 
     @Override
@@ -85,12 +86,14 @@ public class MainActivity extends AppCompatActivity {
         txtMsgsSentVal = findViewById(R.id.txtMsgsSentVal);
 
         txtLastMsgSentVal = findViewById(R.id.txtLastMsgSentVal);
-        txtLastMsgReceivedVal = findViewById(R.id.txtLastMsgReceivedVal);
 
         sensorManager   = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         sensor_accelero = Objects.requireNonNull(sensorManager).getSensorList(Sensor.TYPE_ACCELEROMETER).get(0);
 
         btnStop.setEnabled(false);
+
+        TextView txtMsgsReceivedVal = findViewById(R.id.txtMsgsReceivedVal);
+        txtMsgsReceivedVal.setText(Integer.toString(msgReceivedCount));
     }
 
     private void stop()
@@ -132,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                     for(;;)
                     {
                         sendMessages();
+                        updateWins();
                         Thread.sleep(sendMessagesInterval);
                     }
                 }
@@ -186,6 +190,12 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         }
     };
+
+    private void updateWins() {
+        TextView txtWinsVal = findViewById(R.id.txtWinsVal);
+        txtWinsVal.setText(Integer.toString(wins`Count++));
+
+    }
 
     private void sendMessages()
     {
@@ -262,7 +272,6 @@ public class MainActivity extends AppCompatActivity {
             msgReceivedCount++;
             TextView txtMsgsReceivedVal = findViewById(R.id.txtMsgsReceivedVal);
             txtMsgsReceivedVal.setText(Integer.toString(msgReceivedCount));
-            txtLastMsgReceivedVal.setText("[" + new String(msg.getBytes(), Message.DEFAULT_IOTHUB_MESSAGE_CHARSET) + "]");
             return IotHubMessageResult.COMPLETE;
         }
     }
